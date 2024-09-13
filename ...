@@ -1,0 +1,24 @@
+x, y = input().split()
+x, y = int(x), int(y)
+
+a, b = input().split()
+a, b = int(a), int(b)
+
+time = 0
+
+
+if a < b:
+    time += x*(b - a)
+    b -= (b - a)
+    time += y*a
+
+elif a > b:
+    time += x*(a - b)   
+    a -= (a - b)
+    time += y*a
+
+elif a == b:
+    time += y*a
+
+
+print(time)
